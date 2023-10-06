@@ -7,7 +7,45 @@ readme = "README.rst"
 
 [tool.poetry.dependencies]
 python = "^3.11"
+uvloop = "^0.17.0"
+pydantic-settings = "^2.0.3"
+aiofiles = "^23.2.1"
+orjson = "^3.9.7"
 
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.2"
+pytest-asyncio = "^0.21.1"
+pytest-cov = "^4.1.0"
+coverage = {extras = ["toml"], version = "^7.3.2"}
+ruff = "^0.0.292"
+black = "^23.9.1"
+isort = "^5.12.0"
+mypy = "^1.5.1"
+sphinx = "^7.2.6"
+cython = "^3.0.3"
+pre-commit = "^3.4.0"
+
+[tool.pytest.ini_options]
+# todo
+
+[tool.coverage.run]
+# todo
+
+[tool.coverage.report]
+# todo
+
+[tool.black]
+# todo
+
+[tool.isort]
+# todo
+
+[tool.ruff]
+# todo
+
+[tool.mypy]
+# todo
 
 [build-system]
 requires = ["poetry-core"]
