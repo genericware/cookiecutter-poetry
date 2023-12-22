@@ -25,9 +25,7 @@ cython = "^3.0.3"
 pre-commit = "^3.4.0"
 
 [tool.pytest.ini_options]
-testpaths = [
-    "tests",
-]
+testpaths = ["tests"]
 
 [tool.coverage.run]
 omit = [".*", "*/site-packages/*"]
