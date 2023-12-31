@@ -1,12 +1,10 @@
 [tool.poetry]
-name = "python-package-poetry"
-version = "0.1.0"
-description = ""
-license = "MIT"
-authors = ["caerulescens <caerulescens.github@proton.me>"]
-maintainers = ["caerulescens <caerulescens.github@proton.me>"]
+name = "{{ cookiecutter.project_name }}"
+version = "{{ cookiecutter.project_version }}"
+description = "{{ cookiecutter.project_description }}"
+authors = ["{{ cookiecutter.project_authors }}"]
 readme = "README.md"
-packages = [{include = "cookiecutter_poetry", from = "src"}]
+packages = [{include = "{{ cookiecutter.package_slug }}", from = "src"}]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.13"
