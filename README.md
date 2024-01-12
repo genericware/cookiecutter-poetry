@@ -1,87 +1,81 @@
-================
- python-package-poetry
-================
+# cookiecutter-poetry
 
-:Author: caerulescens <caerulescens.github@proton.me>
-:Description:
+A [`cookiecutter`](https://github.com/cookiecutter/cookiecutter) template for [`poetry`](https://github.com/python-poetry/poetry) projects.
 
-==============
- dependencies
-==============
+## dependencies
 
+| name                                       | description                                |
+|--------------------------------------------|--------------------------------------------|
+| [pyenv](https://github.com/pyenv/pyenv)    | python version management                  |
+| [poetry](https://github.com/python-poetry) | python packaging and dependency management |
 
-+------------+--------------------------------------------+
-| dependency | description                                |
-+============+============================================+
-| `cpython`_ | programming language                       |
-+------------+--------------------------------------------+
-| `pyenv`_   | python version management                  |
-+------------+--------------------------------------------+
-| `poetry`_  | python package and dependency management   |
-+------------+--------------------------------------------+
-| `make`_    | generates executables from source files    |
-+------------+--------------------------------------------+
+## install
 
-=========
- install
-=========
+development:
+```shell
+poetry install
+poetry shell
+pre-commit install
+```
 
-#. install `cpython`_, `pyenv`_, `poetry`_, and `make`_
-#. initialize poetry project::
+production:
+```shell
+poetry install --without dev
+```
 
-    poetry install
+## build
 
-#. initialize pre-commit hooks::
+> [!IMPORTANT]  
+> `src/cookiecutter-poetry` is not currently used.
 
-    pre-commit install
+package:
+```shell
+poetry build
+```
 
-=======
- usage
-=======
+## run
 
-run::
+template:
+```shell
+cookiecutter https://github.com/generic-infrastructure/cookiecutter-poetry
+```
 
-    python main.py
+test:
+```shell
+pytest .
+```
 
-test::
+coverage:
+```shell
+coverage run -m pytest && coverage report -m
+```
 
-    pytest .
+matrix:
+```shell
+tox run
+```
 
-coverage::
+doc:
+```shell
+make -C docs html
+```
 
-    coverage run -m pytest
-    coverage report -m
+check:
+```shell
+pre-commit run
+```
 
-tox::
+format:
+```shell
+black .
+```
 
-    todo
+lint:
+```shell
+ruff .
+```
 
-docs::
-
-    make -C docs html
-
-pre-commit::
-
-    pre-commit run --all-files
-
-black::
-
-    black .
-
-isort::
-
-    isort --profile black --filter-files
-
-ruff::
-
-    ruff .
-
-mypy::
-
-    mypy .
-
-
-.. _cpython: https://www.python.org/
-.. _pyenv: https://github.com/pyenv/pyenv
-.. _poetry: https://python-poetry.org/
-.. _make: https://www.gnu.org/software/make/
+type:
+```shell
+mypy .
+```
