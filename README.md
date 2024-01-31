@@ -26,7 +26,7 @@ poetry install --without dev
 ## build
 
 > [!IMPORTANT]  
-> `src/cookiecutter-poetry` is not currently used.
+> `src/cookiecutter_poetry` is not currently used.
 
 package:
 ```shell
