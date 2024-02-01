@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "python-package-poetry"
+name = "cookiecutter-poetry"
 version = "0.1.0"
 description = ""
 license = "MIT"
@@ -10,6 +10,7 @@ packages = [{include = "cookiecutter_poetry", from = "src"}]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.13"
+cookiecutter = "^2.5.0"
 pydantic = "^2.5.2"
 pydantic-settings = "^2.1.0"
 
@@ -20,15 +21,10 @@ pytest-cov = "^4.1.0"
 pytest-sugar = "^0.9.7"
 coverage = {extras = ["toml"], version = "^7.3.2"}
 tox = "^4.11.4"
-black = "^23.9.1"
-ruff = "^0.1.7"
-mypy = "^1.7.1"
 sphinx = "^7.2.6"
 sphinx_rtd_theme = "2.0.0"
 myst-parser = "^2.0.0"
-pydocstyle = "^6.3.0"
 cython = "^3.0.2"
-pre-commit = "^3.4.0"
 
 [tool.pytest.ini_options]
 minversion = "7.1.1"
