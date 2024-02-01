@@ -1,5 +1,4 @@
-# todo: review
-# todo: pylibrary template
+# todo: libffi + cython support
 [tool.poetry]
 name = "{{ cookiecutter.project_name }}"
 version = "{{ cookiecutter.project_version }}"
